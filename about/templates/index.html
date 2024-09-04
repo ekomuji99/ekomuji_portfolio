@@ -1,0 +1,234 @@
+<!-- shorcut create html structur : press Shift+1 + enter or tab -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="icon" href="{% static 'img/django4.png' %}" type="image/png">
+  <title>Django_Project</title>
+</head>
+<body id="home">
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+ 
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#home">
+        <img class="img-thumbnail" src="{% static 'img/django2.png' %}" alt="django" width="30" height="30">
+        Django_Project
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <!-- <a class="nav-link Active" aria-current="page" href="{% url 'index' %}">Home</a> -->
+            <a class="nav-link Active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login_view' %}">Login</a>
+          </li>
+          {% comment %} <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li> {% endcomment %}
+        </ul>
+        {% comment %} <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> {% endcomment %}
+      </div>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+  
+  <!-- jumbotron -->
+  <section class="jumbotron text-center">
+      <img class="rounded-circle" src="{% static 'img/kuroko2.jpg' %}" alt="foto" width="200">
+      <h1 class="display-4">Tetsuya Kuroko</h1>
+      <p class="lead">I am a regular basketball player at Seirin</p>
+      <svg id="svg" viewBox="0 0 1440 250" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 77.80044182621504,109.04731222385863 155.60088365243007,68.09462444771724 209,84 C 262.39911634756993,99.90537555228276 291.3969072164948,172.66881443298968 340,208 C 388.6030927835052,243.33118556701032 456.8114874815906,241.23011782032398 523,218 C 589.1885125184094,194.76988217967602 653.3571428571429,150.41071428571428 724,128 C 794.6428571428571,105.58928571428571 871.759941089838,105.12702503681885 926,124 C 980.240058910162,142.87297496318115 1011.6030927835052,181.0811855670103 1066,175 C 1120.3969072164948,168.9188144329897 1197.8276877761414,118.54823269513992 1264,107 C 1330.1723122238586,95.45176730486008 1385.0861561119293,122.72588365243004 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#ffffff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+  </section>
+  <!-- akhir jumbotron -->
+
+  <!-- about -->
+  <section id="about">
+      <div class="container">
+        <div class="row text-center mb-3">
+            <div class="col">
+            <h2 class="fw-bold">About Me</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae tenetur doloremque laborum explicabo fuga? Pariatur in dolore   veritatis qui deleniti!</p>
+            </div>
+            <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam eos molestiae tempora commodi! Rerum, saepe tenetur.  Exercitationem sunt repellendus deleniti labore necessitatibus sapiente vero libero?</p>
+            </div>
+        </div>
+      </div>
+      <svg id="svg" viewBox="0 0 1440 250" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 77.80044182621504,109.04731222385863 155.60088365243007,68.09462444771724 209,84 C 262.39911634756993,99.90537555228276 291.3969072164948,172.66881443298968 340,208 C 388.6030927835052,243.33118556701032 456.8114874815906,241.23011782032398 523,218 C 589.1885125184094,194.76988217967602 653.3571428571429,150.41071428571428 724,128 C 794.6428571428571,105.58928571428571 871.759941089838,105.12702503681885 926,124 C 980.240058910162,142.87297496318115 1011.6030927835052,181.0811855670103 1066,175 C 1120.3969072164948,168.9188144329897 1197.8276877761414,118.54823269513992 1264,107 C 1330.1723122238586,95.45176730486008 1385.0861561119293,122.72588365243004 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#e6e6e6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+  </section>
+  <!-- akhir about -->
+
+  <!-- Project -->
+  <section id="projects">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2 class="fw-bold">My Projects</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'img/kuroko3.jpg' %}" alt="project1" height="200px">            
+            <div class="card-body">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'img/kuroko4.jpg' %}" alt="project2" height="200px">           
+            <div class="card-body">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'img/kuroko5.jpg' %}" alt="project3" height="200px">           
+            <div class="card-body">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'img/kuroko6.jpg' %}" alt="project4" height="200px">           
+            <div class="card-body">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'img/kuroko7.jpg' %}" alt="project5" height="200px">           
+            <div class="card-body">
+              <h3 class="card-title">Card title</h3>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- <div class="row justify-content-center">
+        <div class="card">
+          <div class="img-box">
+            <img class="card-img-top" src="{% static 'img/kuroko3.jpg' %}" alt="project1">
+          </div>            
+          <div class="content">
+            <h3 class="card-title">Card title</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="">Read More</a>
+          </div>      
+      </div> -->
+    </div>
+    <svg id="svg" viewBox="0 0 1440 250" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 77.80044182621504,109.04731222385863 155.60088365243007,68.09462444771724 209,84 C 262.39911634756993,99.90537555228276 291.3969072164948,172.66881443298968 340,208 C 388.6030927835052,243.33118556701032 456.8114874815906,241.23011782032398 523,218 C 589.1885125184094,194.76988217967602 653.3571428571429,150.41071428571428 724,128 C 794.6428571428571,105.58928571428571 871.759941089838,105.12702503681885 926,124 C 980.240058910162,142.87297496318115 1011.6030927835052,181.0811855670103 1066,175 C 1120.3969072164948,168.9188144329897 1197.8276877761414,118.54823269513992 1264,107 C 1330.1723122238586,95.45176730486008 1385.0861561119293,122.72588365243004 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#ffffff" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+    </section>
+    <!-- Akhir Project -->
+    
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2 class="fw-bold">Contact Me</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="yourname">
+              <label for="name" class="form-lable">Fullname</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="name@example.com">
+              <label for="email" class="form-lable">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea name="" id="message" class="form-control" placeholder="message" style="height: 100px;"></textarea>
+              <label for="message" class="form-lable">Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <svg id="svg" viewBox="0 0 1440 250" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 77.80044182621504,109.04731222385863 155.60088365243007,68.09462444771724 209,84 C 262.39911634756993,99.90537555228276 291.3969072164948,172.66881443298968 340,208 C 388.6030927835052,243.33118556701032 456.8114874815906,241.23011782032398 523,218 C 589.1885125184094,194.76988217967602 653.3571428571429,150.41071428571428 724,128 C 794.6428571428571,105.58928571428571 871.759941089838,105.12702503681885 926,124 C 980.240058910162,142.87297496318115 1011.6030927835052,181.0811855670103 1066,175 C 1120.3969072164948,168.9188144329897 1197.8276877761414,118.54823269513992 1264,107 C 1330.1723122238586,95.45176730486008 1385.0861561119293,122.72588365243004 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="#212529" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+  </section>
+  <!-- Akhir Contact -->
+
+  <!-- Footer -->
+  <Footer class="bg-dark text-center p-3">
+    <p class="text-white">&copy Created by Kuroko</p>
+  </Footer>
+  <!-- Akhir Footer -->
+
+
+
+
+  <!-- {% block content %}
+      <div class="container">
+          <h1>{{ name }}</h1>
+      </div>
+  {% endblock content %} -->
+
+</body>
+</html>
